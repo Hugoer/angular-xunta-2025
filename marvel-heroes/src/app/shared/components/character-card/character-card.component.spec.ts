@@ -8,30 +8,31 @@ describe('CharacterCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharacterCardComponent],
+      imports: [CharacterCardComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(CharacterCardComponent);
     component = fixture.componentInstance;
+
+    // Props simuladas
     component.name = 'Iron Man';
     component.image = 'https://example.com/ironman.jpg';
     component.description = 'Genius, billionaire, playboy, philanthropist.';
     fixture.detectChanges();
   });
 
-  it('should display character name', () => {
-    const titleEl = fixture.debugElement.query(By.css('.card__title')).nativeElement;
-    expect(titleEl.textContent).toContain('Iron Man');
+  it('should display the character name', () => {
+    const title = fixture.debugElement.query(By.css('.card__title')).nativeElement;
+    expect(title.textContent).toContain('Iron Man');
   });
 
-  it('should display character image', () => {
-    const imgEl = fixture.debugElement.query(By.css('img')).nativeElement;
-    expect(imgEl.src).toContain('ironman.jpg');
+  it('should display the character image', () => {
+    const img = fixture.debugElement.query(By.css('img')).nativeElement;
+    expect(img.src).toContain('ironman.jpg');
   });
 
-  it('should display character description', () => {
-    const descEl = fixture.debugElement.query(By.css('.card__description')).nativeElement;
-    expect(descEl.textContent).toContain('Genius');
+  it('should display the character description', () => {
+    const desc = fixture.debugElement.query(By.css('.card__description')).nativeElement;
+    expect(desc.textContent).toContain('Genius');
   });
 });
-// The test suite for the CharacterCardComponent is designed to ensure that the component correctly displays the character's name, image, and description.
