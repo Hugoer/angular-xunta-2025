@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-character-card',
-  imports: [],
+  standalone: true,
   templateUrl: './character-card.component.html',
-  styleUrl: './character-card.component.scss'
+  styleUrls: ['./character-card.component.scss']
 })
 export class CharacterCardComponent {
-
+  @Input() name: string = 'Character Name';
+  @Input() image: string = '';
+  @Input() description: string = 'Short description goes here.';
 }

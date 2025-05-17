@@ -1,1 +1,7 @@
-<p>character-card works!</p>
+<div class="card">
+  <img [src]="image" alt="{{ name }}" class="card__image" />
+  <div class="card__content">
+    <h2 class="card__title">{{ name }}</h2>
+    <p class="card__description">{{ description }}</p>
+  </div>
+</div>
