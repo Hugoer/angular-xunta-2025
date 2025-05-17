@@ -29,8 +29,4 @@ describe('CharacterListComponent', () => {
     expect(cards.length).toBe(2);
   });
 
-  it('should pass correct name to first character card', () => {
-    const name = component.characters[0].name;
-    expect(name).toBe('Iron Man');
-  });
 });

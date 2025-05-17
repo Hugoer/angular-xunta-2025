@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SwapiService } from '../../core/services/swapi.service';
 import { CommonModule } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-character-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AsyncPipe],
   templateUrl: './character-detail.component.html',
   styleUrls: ['./character-detail.component.scss']
 })
 export class CharacterDetailComponent {
-  characterId: string | null = null;
+  private route = inject(ActivatedRoute);
+  private starWarsService = inject(SwapiService);
 
-  constructor(private route: ActivatedRoute) {
-    this.characterId = this.route.snapshot.paramMap.get('id');
-  }
+  character$ = this.starWarsService.getCharacterById(Number(this.route.snapshot.paramMap.get('id')));
 }

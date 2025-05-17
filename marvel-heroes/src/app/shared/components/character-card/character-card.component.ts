@@ -13,7 +13,5 @@ import { ScaleOnHoverDirective } from '../../directives/scale-on-hover.directive
   styleUrls: ['./character-card.component.scss']
 })
 export class CharacterCardComponent {
-  @Input() name: string = 'Character Name';
-  @Input() image: string = '';
-  @Input() description: string = 'Short description goes here.';
+  @Input() name!: string;
 }
