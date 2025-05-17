@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CharacterCardComponent } from '../../shared/components/character-card/character-card.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-character-list',
@@ -8,6 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     CharacterCardComponent,
+    RouterModule,
   ],
   templateUrl: './character-list.component.html',
   styleUrls: ['./character-list.component.scss']

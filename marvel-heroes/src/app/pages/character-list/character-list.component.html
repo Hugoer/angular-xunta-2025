@@ -1,8 +1,9 @@
 <section class="character-list">
   <app-character-card
-    *ngFor="let character of characters"
+    *ngFor="let character of characters; let i = index"
     [name]="character.name"
     [image]="character.image"
     [description]="character.description"
+    [routerLink]="['/character', i]"
   ></app-character-card>
 </section>
