@@ -18,12 +18,12 @@ export class CharacterListComponent {
   characters = [
     {
       name: 'Iron Man',
-      image: 'https://static.wikia.nocookie.net/iron-man-armored-adventures/images/8/83/Detail25.jpg/revision/latest?cb=20120428182906',
+      image: 'https://static.wikia.nocookie.net/iron-man-armored-adventures/images/8/83/Detail25.jpg',
       description: 'Genius, billionaire, playboy, philanthropist.'
     },
     {
       name: 'Spider-Man',
-      image: 'https://static.wikia.nocookie.net/spiderman/images/a/ad/Peter_Parker_%28Earth-616%29_017.png/revision/latest?cb=20210807043502',
+      image: 'https://static.wikia.nocookie.net/spiderman/images/a/ad/Peter_Parker_%28Earth-616%29_017.png',
       description: 'Friendly neighborhood hero with spider powers.'
     }
   ];
